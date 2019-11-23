@@ -8,7 +8,7 @@ export default function Project({
   text = 'Text'
 }) {
   return (
-    <div className='p-3'>
+    <div className='py-3'>
       <Card>
         <Card.Body>
           <Card.Img></Card.Img>

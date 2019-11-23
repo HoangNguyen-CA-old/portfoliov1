@@ -12,7 +12,6 @@ export default function App() {
       <Cover />
       <Navbar />
       <About />
-      <hr className='bg-light mt-2 mb-0'></hr>
       <ProjectSection />
       <Footer />
     </div>
