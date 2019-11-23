@@ -1,4 +1,7 @@
-//Importing Fonts
+@import './lux/variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './lux/bootswatch';
+
 @font-face {
   font-family: 'Varela';
   src: url('./fonts/Varela-Regular.ttf') format('truetype');

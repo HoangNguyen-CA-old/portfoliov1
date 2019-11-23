@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.scss';
-import { Container } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 
 export default function About() {
   return (

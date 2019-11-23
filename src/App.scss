@@ -1,6 +1,36 @@
+@import './components/utilities';
+
 * {
   margin: 0px;
   padding: 0px;
 }
-.page_wrapper {
+@include respond-above(xxs) {
+  html {
+    font-size: 10px;
+  }
+}
+@include respond-above(xs) {
+  html {
+    font-size: 12px;
+  }
+}
+@include respond-above(sm) {
+  html {
+    font-size: 15px;
+  }
+}
+@include respond-above(md) {
+  html {
+    font-size: 18px;
+  }
+}
+@include respond-above(lg) {
+  html {
+    font-size: 20px;
+  }
+}
+@include respond-above(xl) {
+  html {
+    font-size: 22px;
+  }
 }

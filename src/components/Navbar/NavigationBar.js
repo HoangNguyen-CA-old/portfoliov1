@@ -5,13 +5,16 @@ import { Navbar, NavbarBrand, Nav } from 'react-bootstrap';
 export default function Navigationbar() {
   return (
     <div>
-      <Navbar bg='dark' variant='dark' className='justify-content-between'>
-        <NavbarBrand>Hoang Nguyen</NavbarBrand>
-        <Nav className='justify-content-end nav_links'>
-          <Nav.Link>About</Nav.Link>
-          <Nav.Link>Projects</Nav.Link>
-          <Nav.Link>Technologies</Nav.Link>
-        </Nav>
+      <Navbar expand='sm' bg='dark' variant='dark'>
+        <NavbarBrand className='lead'>Hoang Nguyen</NavbarBrand>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav className='ml-auto'>
+            <Nav.Link className='px-4'>About</Nav.Link>
+            <Nav.Link className='px-4'>Projects</Nav.Link>
+            <Nav.Link className='px-4'>Technologies</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </div>
   );
