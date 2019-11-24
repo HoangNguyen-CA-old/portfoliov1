@@ -20,7 +20,7 @@ export default function Technologies() {
       <Container fluid={true}>
         <Row className='text-center align-content-center'>
           <Col xs={12} className='text-center align-content-center pt-5 pb-3'>
-            <h4 className=''>Technologies</h4>
+            <h3 className=''>Technologies</h3>
             <p class='lead'>Some of the technologies that I use</p>
           </Col>
           <Col xs={6} sm={4} lg={3}>

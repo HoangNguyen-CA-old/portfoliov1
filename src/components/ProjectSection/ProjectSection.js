@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProjectSection.scss';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import Project from './Project/Project';
 
 export default function ProjectSection() {
@@ -12,16 +12,13 @@ export default function ProjectSection() {
             <h4 className='text-light'>Projects</h4>
             <p>Here are a few projects that I have worked on in the past</p>
           </Col>
-          <Col xs={6} md={4} xl={3}>
+          <Col xs={6} md={4}>
             <Project />
           </Col>
-          <Col xs={6} md={4} xl={3}>
+          <Col xs={6} md={4}>
             <Project />
           </Col>
-          <Col xs={6} md={4} xl={3}>
-            <Project />
-          </Col>
-          <Col xs={6} md={4} xl={3}>
+          <Col xs={6} md={4}>
             <Project />
           </Col>
         </Row>

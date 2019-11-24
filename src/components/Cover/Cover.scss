@@ -5,18 +5,9 @@
   min-height: 300px;
   height: 100vh;
   width: 100%;
-  background-color: grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#name {
-  font-size: 5rem;
-  font-family: 'Varela';
-}
-
-#title {
-  font-size: 3rem;
-  font-family: 'Muli-Light';
+  background-image: url('./project1.jpg');
+  background-size: cover;
 }
