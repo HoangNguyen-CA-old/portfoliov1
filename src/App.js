@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/NavigationBar';
 import About from './components/About/About';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import Footer from './components/Footer/Footer';
+import TechnologySection from './components/TechnologySection/TechnologySection';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar />
       <About />
       <ProjectSection />
+      <TechnologySection />
       <Footer />
     </div>
   );

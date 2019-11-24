@@ -1,14 +1,15 @@
 import React from 'react';
 import './About.scss';
-import { Jumbotron } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 export default function About() {
   return (
-    <div className='about_section'>
+    <Container className='about_section'>
       <h3 className='about_header'>About Me</h3>
       <p className='about_content'>
-        I'm a web developer based in Toronto, Canada.
+        I'm a web developer based in Toronto, Canada.<br></br>
+        I'm very open minded and eager to learn.
       </p>
-    </div>
+    </Container>
   );
 }
