@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f6f8d13cfe0a5d0d00f2588f77dd1d69",
+    "revision": "a7b89685d45b5ea6cf86065614fc7025",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "f2730202f295f6bb1e81",
-    "url": "/Portfolio/static/css/main.bf78c957.chunk.css"
+    "revision": "9ae1b887ddb1973c0331",
+    "url": "/Portfolio/static/css/main.16afcdfe.chunk.css"
   },
   {
-    "revision": "83362e1a67bc436e51cc",
-    "url": "/Portfolio/static/js/2.e90fd9e7.chunk.js"
+    "revision": "efdf0c581f1f32ce8f3e",
+    "url": "/Portfolio/static/js/2.113c7a26.chunk.js"
   },
   {
-    "revision": "f2730202f295f6bb1e81",
-    "url": "/Portfolio/static/js/main.e6c1ffb1.chunk.js"
+    "revision": "9ae1b887ddb1973c0331",
+    "url": "/Portfolio/static/js/main.f5aa9498.chunk.js"
   },
   {
     "revision": "dd65a4e71a8b70668f2c",
@@ -34,5 +34,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bb4e479a2da1aaca15c79131e369cd03",
     "url": "/Portfolio/static/media/Varela-Regular.bb4e479a.ttf"
+  },
+  {
+    "revision": "a7956eea310a3ae9d9c24a46cc1e8a68",
+    "url": "/Portfolio/static/media/project1.a7956eea.jpg"
   }
 ]);
