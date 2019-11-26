@@ -16,39 +16,61 @@ import {
 
 export default function Technologies() {
   return (
-    <div>
+    <div className='bg-secondary pb-5'>
       <Container fluid={true}>
-        <Row className='text-center align-content-center'>
-          <Col xs={12} className='text-center align-content-center pt-5 pb-3'>
-            <h3 className=''>Technologies</h3>
-            <p class='lead'>Some of the technologies that I use</p>
+        <Row className='text-center'>
+          <Col xs={12} className='text-center align-content-center pt-5 pb-1'>
+            <h3 className='text-danger technologies_header'>Technologies</h3>
+            <p className='lead text-primary-text'>
+              Some of the technologies that I use
+            </p>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faReact} text='React'></Technology>
+            <Technology
+              icon={faReact}
+              text='React'
+              color='#61DBFB'
+            ></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faHtml5} text='HTML5'></Technology>
+            <Technology
+              icon={faHtml5}
+              text='HTML5'
+              color='#E44D26'
+            ></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faCss3} text='CSS3'></Technology>
+            <Technology icon={faCss3} text='CSS3' color='#2965f1'></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faSass} text='SASS'></Technology>
+            <Technology icon={faSass} text='SASS' color='#CD6799'></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faBootstrap} text='Bootstrap'></Technology>
+            <Technology
+              icon={faBootstrap}
+              text='Bootstrap'
+              color='#602C50'
+            ></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faJs} text='Javascript'></Technology>
+            <Technology
+              icon={faJs}
+              text='Javascript'
+              color='#F0DB4F'
+            ></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faNodeJs} text='NodeJS'></Technology>
+            <Technology
+              icon={faNodeJs}
+              text='NodeJS'
+              color='#3C873A'
+            ></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faNpm} text='npm'></Technology>
+            <Technology icon={faNpm} text='npm' color='#CC3534'></Technology>
           </Col>
           <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faGit} text='Git'></Technology>
+            <Technology icon={faGit} text='Git' color='#F1502F'></Technology>
           </Col>
         </Row>
       </Container>

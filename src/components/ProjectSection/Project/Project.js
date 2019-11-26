@@ -1,8 +1,19 @@
 import React from 'react';
 import './Project.scss';
 import { Card } from 'react-bootstrap';
-//import image from '../Images/project1.jpg';
+import posed from 'react-pose';
 
+const PosedCard = posed(Card)({
+  hoverable: true,
+  init: {
+    scale: 1,
+    boxShadow: '0px 0px 0px rgba(0,0,0,0)'
+  },
+  hover: {
+    scale: 1.1,
+    boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
+  }
+});
 export default function Project({
   title = 'Project',
   desc = 'Desc',
@@ -10,15 +21,13 @@ export default function Project({
   image = require('../Images/project1.jpg')
 }) {
   return (
-    <div className='py-3'>
-      <Card border='primary' className='text-dark bg-light'>
-        <Card.Body className='text-center'>
-          <Card.Img src={image} alt='Picture' />
-          <Card.Title>{title}</Card.Title>
-          <Card.Subtitle>{desc}</Card.Subtitle>
-          <Card.Text>{text}</Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
+    <PosedCard border='primary' className='text-dark bg-light m-3'>
+      <Card.Body className='text-center'>
+        <Card.Img src={image} alt='Picture' />
+        <Card.Title>{title}</Card.Title>
+        <Card.Subtitle>{desc}</Card.Subtitle>
+        <Card.Text>{text}</Card.Text>
+      </Card.Body>
+    </PosedCard>
   );
 }

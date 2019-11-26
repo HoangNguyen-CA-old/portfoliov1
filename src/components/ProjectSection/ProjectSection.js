@@ -8,9 +8,11 @@ export default function ProjectSection() {
     <div>
       <Container fluid={true} className='bg-dark projects_container'>
         <Row>
-          <Col xs={12} className='text-center align-content-center pt-5 pb-3'>
-            <h4 className='text-light'>Projects</h4>
-            <p>Here are a few projects that I have worked on in the past</p>
+          <Col xs={12} className='text-center pt-5 pb-3'>
+            <h4 className='text-success projects_header'>Projects</h4>
+            <p className='lead'>
+              Here are a few projects that I have worked on in the past
+            </p>
           </Col>
           <Col xs={6} md={4}>
             <Project />

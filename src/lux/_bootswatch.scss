@@ -25,10 +25,6 @@ $web-font-path: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,600' !d
   }
 }
 
-.bg-primary {
-  background-color: $gray-900 !important;
-}
-
 .bg-light {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -86,10 +82,6 @@ $web-font-path: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,600' !d
   border-width: 2px;
 }
 
-.border-secondary {
-  border: 1px solid $gray-400 !important;
-}
-
 // Typography ==================================================================
 
 body {
@@ -105,10 +97,6 @@ h5,
 h6 {
   text-transform: uppercase;
   letter-spacing: 3px;
-}
-
-.text-secondary {
-  color: $body-color !important;
 }
 
 // Tables ======================================================================
