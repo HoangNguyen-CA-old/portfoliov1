@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7b89685d45b5ea6cf86065614fc7025",
+    "revision": "09e485b667f89d3e61f45b94669f7e89",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "9ae1b887ddb1973c0331",
-    "url": "/Portfolio/static/css/main.16afcdfe.chunk.css"
+    "revision": "66e4383a3c620e2b0d7b",
+    "url": "/Portfolio/static/css/main.6e0f5939.chunk.css"
   },
   {
-    "revision": "efdf0c581f1f32ce8f3e",
-    "url": "/Portfolio/static/js/2.113c7a26.chunk.js"
+    "revision": "2b4410539349231d5bf9",
+    "url": "/Portfolio/static/js/2.95172b44.chunk.js"
   },
   {
-    "revision": "9ae1b887ddb1973c0331",
-    "url": "/Portfolio/static/js/main.f5aa9498.chunk.js"
+    "revision": "66e4383a3c620e2b0d7b",
+    "url": "/Portfolio/static/js/main.bdeaf5d2.chunk.js"
   },
   {
     "revision": "dd65a4e71a8b70668f2c",
@@ -36,7 +36,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/media/Varela-Regular.bb4e479a.ttf"
   },
   {
-    "revision": "a7956eea310a3ae9d9c24a46cc1e8a68",
-    "url": "/Portfolio/static/media/project1.a7956eea.jpg"
+    "revision": "c782efd5544421e12890928b9586c632",
+    "url": "/Portfolio/static/media/cover.c782efd5.jpg"
+  },
+  {
+    "revision": "c782efd5544421e12890928b9586c632",
+    "url": "/Portfolio/static/media/project1.c782efd5.jpg"
   }
 ]);
