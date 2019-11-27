@@ -23,9 +23,9 @@ $green: #4bbf73;
 $teal: #20c997;
 $cyan: #1f9bcf;
 
-$theme-colors: ();
-// Below are already in theme-colors (default bootstrap)
-$primary: $gray-900;
+$theme-colors: (); //Custom theme colors
+
+$primary: $gray-900; //bg-primary overriden in bootswatch.scss watch out
 $secondary: $white;
 $success: $green;
 $info: $cyan;
@@ -125,4 +125,4 @@ $breadcrumb-bg: transparent !default;
 //CUSTOM
 
 $input-btn-font-family: 'Varela';
-$headings-font-family: 'Varela';
+$headings-font-family: 'Muli-Light';

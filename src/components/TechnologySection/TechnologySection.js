@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TechnologySection.scss';
 import Technology from './Technology/Technology';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -13,17 +13,53 @@ import {
   faNpm,
   faGit
 } from '@fortawesome/free-brands-svg-icons';
+import ScrollTrigger from 'react-scroll-trigger';
+import posed from 'react-pose';
+
+let PosedContainer = posed(Container)({
+  open: {
+    delayChildren: 0,
+    staggerChildren: 300
+  },
+  closed: { delay: 0 }
+});
+let Header = posed.h5({
+  open: { x: 0, opacity: 1, applyAtStart: { opacity: 0 } },
+  closed: { x: '-10%', opacity: 0 }
+});
+let Desc = posed.p({
+  open: { x: 0, opacity: 1, applyAtStart: { opacity: 0 } },
+  closed: { x: '-10%', opacity: 0 }
+});
 
 export default function Technologies() {
+  const [rendered, changeRendered] = useState(false);
+
+  let onEnterViewport = () => {
+    changeRendered(true);
+  };
+
+  let onExitViewport = () => {
+    changeRendered(false);
+  };
+
   return (
     <div className='bg-secondary pb-5'>
       <Container fluid={true}>
         <Row className='text-center'>
           <Col xs={12} className='text-center align-content-center pt-5 pb-1'>
-            <h3 className='text-danger technologies_header'>Technologies</h3>
-            <p className='lead text-primary-text'>
-              Some of the technologies that I use
-            </p>
+            <PosedContainer pose={rendered ? 'open' : 'closed'}>
+              <Header className='text-danger technologies_header'>
+                Technologies
+              </Header>
+              <ScrollTrigger
+                onEnter={onEnterViewport}
+                onExit={onExitViewport}
+              ></ScrollTrigger>
+              <Desc className='lead text-primary-text'>
+                Some of the technologies that I use
+              </Desc>
+            </PosedContainer>
           </Col>
           <Col xs={6} sm={4} lg={3}>
             <Technology
