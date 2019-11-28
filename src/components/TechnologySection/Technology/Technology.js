@@ -11,7 +11,7 @@ export default function Technology({
   text = 'Tech',
   color = '#FF0000'
 }) {
-  const PosedCard = posed(Card)({
+  let PosedCard = posed(Card)({
     hoverable: true,
     init: {
       scale: 1,

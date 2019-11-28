@@ -18,11 +18,11 @@ export default function Project({
   title = 'Project',
   desc = 'Desc',
   text = 'Text',
-  image = require('../Images/project1.jpg')
+  image = require('../Images/project1.png')
 }) {
   return (
-    <PosedCard border='primary' className='text-dark bg-light m-3'>
-      <Card.Body className='text-center'>
+    <PosedCard border='primary' className='text-dark bg-light m-2'>
+      <Card.Body className='text-center p-1'>
         <Card.Img src={image} alt='Picture' />
         <Card.Title>{title}</Card.Title>
         <Card.Subtitle>{desc}</Card.Subtitle>

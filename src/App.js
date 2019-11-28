@@ -6,6 +6,7 @@ import About from './components/About/About';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import Footer from './components/Footer/Footer';
 import TechnologySection from './components/TechnologySection/TechnologySection';
+import Contact from './components/Contact/Contact';
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
       <About />
       <ProjectSection />
       <TechnologySection />
+      <hr className='m-0 p-0 bg-danger'></hr>
+      <Contact />
       <Footer />
     </div>
   );

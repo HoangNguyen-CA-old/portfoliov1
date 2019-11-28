@@ -13,11 +13,21 @@ let PosedContainer = posed(Container)({
 });
 
 let Header = posed.h3({
-  open: { x: 0, opacity: 1, applyAtStart: { opacity: 0 } },
+  open: {
+    x: 0,
+    opacity: 1,
+    applyAtStart: { opacity: 0 },
+    transition: {}
+  },
   closed: { x: '-10%', opacity: 0 }
 });
 let Desc = posed.p({
-  open: { x: 0, opacity: 1, applyAtStart: { opacity: 0 } },
+  open: {
+    x: 0,
+    opacity: 1,
+    applyAtStart: { opacity: 0 },
+    transition: {}
+  },
   closed: { x: '-10%', opacity: 0 }
 });
 
@@ -33,20 +43,37 @@ export default function About() {
   };
 
   return (
-    <PosedContainer
-      pose={rendered ? 'open' : 'closed'}
-      fluid={true}
-      className='text-center bg-secondary about_section'
-    >
-      <Header className='text-warning about_header'>About Me</Header>
-      <ScrollTrigger
-        onEnter={onEnterViewport}
-        onExit={onExitViewport}
-      ></ScrollTrigger>
-      <Desc className='about_desc'>
-        I'm a web developer based in Toronto, Canada.
-        <br></br>
-      </Desc>
-    </PosedContainer>
+    <div className='about_section bg-secondary'>
+      <PosedContainer
+        pose={rendered ? 'open' : 'closed'}
+        fluid={true}
+        className='text-center about_container'
+      >
+        <Header className='text-warning about_header'>About Me</Header>
+        <ScrollTrigger
+          onEnter={onEnterViewport}
+          onExit={onExitViewport}
+        ></ScrollTrigger>
+        <Desc className='about_desc'>
+          I'm a web developer based in Toronto, Canada.
+        </Desc>
+      </PosedContainer>
+    </div>
   );
 }
+
+/*
+<Container>
+        <Row className='text-center'>
+          <Col xs={12} sm={6} md={4}>
+            <FontAwesomeIcon icon={faSchool} className='about_icon' />
+          </Col>
+          <Col xs={12} sm={6} md={4}>
+            <FontAwesomeIcon icon={faSearch} className='about_icon' />
+          </Col>
+          <Col xs={12} md={4} className='about_icon'>
+            Wo
+          </Col>
+        </Row>
+      </Container>
+*/

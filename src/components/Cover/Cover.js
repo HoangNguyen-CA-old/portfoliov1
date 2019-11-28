@@ -7,14 +7,27 @@ const Parent = posed.div({
     delayChildren: 100,
     staggerChildren: 300
   },
-  closed: { delay: 300 }
+  closed: { delay: 300 },
+  after: {}
 });
 const Name = posed.h1({
-  open: { y: 0, opacity: 1 },
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: 'easeInOut'
+    }
+  },
   closed: { y: '-100%', opacity: 0 }
 });
 const Title = posed.h2({
-  open: { y: 0, opacity: 1 },
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: 'easeInOut'
+    }
+  },
   closed: { y: '-100%', opacity: 0 }
 });
 const Warn = posed.p({
@@ -28,7 +41,7 @@ export default function Cover() {
   let toggleAnimation = () => setAnimate(setAnimate => !setAnimate);
 
   useEffect(() => {
-    setTimeout(toggleAnimation, 1000);
+    setTimeout(toggleAnimation, 700);
   }, []);
 
   return (

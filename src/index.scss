@@ -19,19 +19,14 @@
   src: url('./fonts/Muli-ExtraLight.ttf') format('truetype');
 }
 
-@include media-breakpoint-down(xs) {
-  html {
-    font-size: 10px;
-  }
-}
 @include media-breakpoint-up(xs) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @include media-breakpoint-up(md) {

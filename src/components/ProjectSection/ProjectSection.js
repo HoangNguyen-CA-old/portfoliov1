@@ -14,11 +14,11 @@ let PosedContainer = posed(Container)({
 });
 let Header = posed.h4({
   open: { x: 0, opacity: 1, applyAtStart: { opacity: 0 } },
-  closed: { x: '-10%', opacity: 0 }
+  closed: { x: '5%', opacity: 0 }
 });
 let Desc = posed.p({
   open: { x: 0, opacity: 1, applyAtStart: { opacity: 0 } },
-  closed: { x: '-10%', opacity: 0 }
+  closed: { x: '5%', opacity: 0 }
 });
 
 export default function ProjectSection() {
