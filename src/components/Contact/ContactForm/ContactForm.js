@@ -17,15 +17,20 @@ const PosedButton = posed(Button)({
 
 export default function ContactForm() {
   return (
-    <Form>
-      <Form.Group controlId='formBasicEmail'>
+    <Form action='https://formspree.io/xaynqlap' method='POST'>
+      <Form.Group controlId='formEmail'>
         <Form.Label>Email address</Form.Label>
-        <Form.Control type='email' placeholder='Enter email' required />
+        <Form.Control
+          type='email'
+          placeholder='Enter email'
+          name='email'
+          required
+        />
       </Form.Group>
 
-      <Form.Group controlId='formBasicPassword'>
+      <Form.Group controlId='formName'>
         <Form.Label>Name</Form.Label>
-        <Form.Control placeholder='Enter Name' required />
+        <Form.Control placeholder='Enter Name' name='name' required />
       </Form.Group>
 
       <Form.Group controlId=''>
@@ -35,6 +40,7 @@ export default function ContactForm() {
           rows='5'
           placeholder='Enter Message'
           required
+          name='message'
         ></Form.Control>
       </Form.Group>
       <div className='submit_container'>
