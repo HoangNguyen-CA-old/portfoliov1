@@ -10,9 +10,18 @@ export default function Navigationbar() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='ml-auto'>
-            <Nav.Link className='px-4'>About</Nav.Link>
-            <Nav.Link className='px-4'>Projects</Nav.Link>
-            <Nav.Link className='px-4'>Technologies</Nav.Link>
+            <Nav.Link className='px-4' href='#about_link'>
+              About
+            </Nav.Link>
+            <Nav.Link className='px-4' href='#project_link'>
+              Projects
+            </Nav.Link>
+            <Nav.Link className='px-4' href='#technology_link'>
+              Technologies
+            </Nav.Link>
+            <Nav.Link className='px-4' href='#contact_link'>
+              Contact
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

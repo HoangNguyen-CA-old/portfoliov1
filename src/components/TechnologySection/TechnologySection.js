@@ -44,7 +44,7 @@ export default function Technologies() {
   };
 
   return (
-    <div className='bg-secondary pb-5'>
+    <div className='bg-secondary pb-5' id='technology_link'>
       <Container fluid={true}>
         <Row className='text-center'>
           <Col xs={12} className='text-center align-content-center pt-5 pb-1'>
@@ -57,7 +57,7 @@ export default function Technologies() {
                 onExit={onExitViewport}
               ></ScrollTrigger>
               <Desc className='lead text-primary-text'>
-                Some of the technologies that I use
+                Technologies I am familiar with
               </Desc>
             </PosedContainer>
           </Col>

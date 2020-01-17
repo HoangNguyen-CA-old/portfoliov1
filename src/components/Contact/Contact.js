@@ -9,6 +9,7 @@ export default function Contact() {
     <Container
       fluid={true}
       className='bg-primary-light text-blue contact_wrapper'
+      id='contact_link'
     >
       <h6 className='contact_header text-dark text-center pt-3'>Contact</h6>
       <Container className='pb-5 pt-4'>

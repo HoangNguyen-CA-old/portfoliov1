@@ -43,7 +43,7 @@ export default function About() {
   };
 
   return (
-    <div className='about_section bg-secondary'>
+    <div className='about_section bg-secondary' id='about_link'>
       <PosedContainer
         pose={rendered ? 'open' : 'closed'}
         fluid={true}

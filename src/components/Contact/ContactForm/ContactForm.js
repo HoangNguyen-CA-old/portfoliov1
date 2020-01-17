@@ -7,11 +7,17 @@ import posed from 'react-pose';
 
 const PosedButton = posed(Button)({
   hoverable: true,
+  init: {},
+  hover: {}
+});
+
+let PosedDiv = posed.div({
+  hoverable: true,
   init: {
-    scale: 1
+    color: 'gray'
   },
   hover: {
-    scale: 1.1
+    color: 'red'
   }
 });
 
@@ -47,21 +53,25 @@ export default function ContactForm() {
         <PosedButton variant='primary' type='submit' className='submit_button'>
           Send Message
         </PosedButton>
-        <div>
+        <div className='icon_container'>
           <a href='https://github.com/HoangNguyen-CA' target='_blank'>
-            <FontAwesomeIcon
-              icon={faGithub}
-              className='contact_icon github_icon'
-            />
+            <PosedDiv className='icon_div'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className='contact_icon github_icon'
+              ></FontAwesomeIcon>
+            </PosedDiv>
           </a>
           <a
             href='https://www.linkedin.com/in/hoang-nguyen-a36636196/'
             target='_blank'
           >
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              className='contact_icon linkedin_icon ml-3'
-            />
+            <PosedDiv className='icon_div'>
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className='contact_icon linkedin_icon ml-3'
+              />
+            </PosedDiv>
           </a>
         </div>
       </div>

@@ -12,16 +12,9 @@ export default function Technology({
   color = '#FF0000'
 }) {
   let PosedCard = posed(Card)({
-    hoverable: true,
     init: {
       scale: 1,
       boxShadow: '0px 0px 0px rgba(0,0,0,0)',
-      color: startColor,
-      'border-color': startColor
-    },
-    hover: {
-      scale: 1.1,
-      boxShadow: '0px 5px 10px rgba(0,0,0,0.2)',
       color: color,
       'border-color': color
     }

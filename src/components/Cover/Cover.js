@@ -48,9 +48,9 @@ export default function Cover() {
     <div className='cover'>
       <Parent className='' pose={animate ? 'open' : 'closed'}>
         <Name className='text-light display-2'>Hoang Nguyen</Name>
-        <Title className='text-light'>Web Developer</Title>
-        <Warn className='text-danger'>Site In Development</Warn>
+        <Title className='text-light'>Full-Stack Developer</Title>
       </Parent>
     </div>
   );
 }
+//<Warn className='text-danger'>Site In Development</Warn>
