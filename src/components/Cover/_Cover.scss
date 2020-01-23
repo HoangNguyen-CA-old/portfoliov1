@@ -43,15 +43,18 @@
     right: 0;
     top: 10%;
   }
+  #cover_desc {
+    margin: 0 5em;
+  }
   #cover_button_container {
-    margin-top: 2rem;
+    margin-top: 1em;
   }
   #cover {
     text-align: center;
   }
 
   #cover_left {
-    padding: 5em;
+    padding: 3em;
   }
   .cover_col {
     height: 50%;
@@ -70,7 +73,7 @@
     margin-top: 5rem;
   }
   #cover_desc {
-    margin-top: 1em;
+    margin: 1em 0em 0em 0em;
   }
   #cover {
     text-align: start;

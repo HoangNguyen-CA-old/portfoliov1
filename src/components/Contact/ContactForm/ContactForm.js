@@ -6,7 +6,11 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function ContactForm() {
   return (
-    <Form action='https://formspree.io/xaynqlap' method='POST'>
+    <Form
+      action='https://formspree.io/xaynqlap'
+      method='POST'
+      className='text-dark'
+    >
       <Form.Group controlId='formEmail'>
         <Form.Label>Email address</Form.Label>
         <Form.Control
@@ -41,7 +45,11 @@ export default function ContactForm() {
           Send Message
         </Button>
         <div className='icon_container'>
-          <a href='https://github.com/HoangNguyen-CA' target='_blank'>
+          <a
+            href='https://github.com/HoangNguyen-CA'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <div className='icon_div'>
               <FontAwesomeIcon
                 icon={faGithub}
@@ -52,6 +60,7 @@ export default function ContactForm() {
           <a
             href='https://www.linkedin.com/in/hoang-nguyen-a36636196/'
             target='_blank'
+            rel='noopener noreferrer'
           >
             <div className='icon_div'>
               <FontAwesomeIcon

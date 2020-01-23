@@ -12,7 +12,7 @@ export default function web_developer() {
     >
       <rect width='1077' height='756' />
       <g id='undraw_web_developer_p3e5 1'>
-        <g clip-path='url(#clip0)'>
+        <g clipPath='url(#clip0)'>
           <g id='Leaves'>
             <path
               id='Vector'

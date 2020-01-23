@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import DeveloperSVG from './web_developer_SVG';
 
 export default function Cover() {
-  const [animate, setAnimate] = useState(false);
-
-  let toggleAnimation = () => setAnimate(setAnimate => !setAnimate);
-
-  useEffect(() => {
-    setTimeout(toggleAnimation, 700);
-  }, []);
-
   return (
     <Container fluid={true} className='bg-primary-light m-0 p-0' id='cover'>
       <Row className='p-0 m-0 w-100 h-100'>
@@ -24,8 +16,13 @@ export default function Cover() {
               based in Toronto, Canada.
             </p>
             <div id='cover_button_container'>
-              <Button className='mr-4 text-dark'>Projects</Button>
-              <Button className='bg-transparent border-secondary text-light'>
+              <Button className='mr-4 text-dark' href='#project_link'>
+                Projects
+              </Button>
+              <Button
+                className='bg-transparent border-secondary text-light'
+                href='#contact_link'
+              >
                 Contact
               </Button>
             </div>

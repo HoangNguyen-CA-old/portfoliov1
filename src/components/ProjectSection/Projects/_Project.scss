@@ -1,0 +1,22 @@
+.project_modal {
+  max-width: none !important;
+}
+
+.project_modal img {
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.project_title {
+  font-size: 1.3rem;
+}
+.project_tech {
+  font-size: 1rem;
+}
+
+.project_desc {
+  font-size: 1.1rem;
+}

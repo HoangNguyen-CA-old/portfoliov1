@@ -13,7 +13,7 @@ export default function Navigationbar() {
               Projects
             </Nav.Link>
             <Nav.Link className='px-4 text-dark' href='#technology_link'>
-              Technologies
+              Skills
             </Nav.Link>
             <Nav.Link className='px-4 text-dark' href='#contact_link'>
               Contact

@@ -1,84 +1,84 @@
-import React, { useState } from 'react';
-import './TechnologySection.scss';
-import Technology from './Technology/Technology';
-import { Container, Row, Col } from 'react-bootstrap';
-import {
-  faReact,
-  faHtml5,
-  faCss3,
-  faSass,
-  faBootstrap,
-  faJs,
-  faNodeJs,
-  faNpm,
-  faGit
-} from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 export default function Technologies() {
-  const [rendered, changeRendered] = useState(false);
-
   return (
-    <div className='bg-dark pb-5' id='technology_link'>
-      <Container fluid={true}>
-        <Row className='text-center'>
-          <Col xs={12} className='text-center align-content-center pt-5 pb-1'>
-            <div>
-              <p className='text-danger technologies_header'>Technologies</p>
+    <Container fluid={true} className='bg-dark' id='technology_link'>
+      <Row className='text-center'>
+        <Col xs={12}>
+          <p id='technologies_header' className='text-primary'>
+            Skills
+          </p>
+          <hr className='mb-3 bg-light'></hr>
+        </Col>
+        <Col xs={6} lg={3} className='my-3'>
+          <Card className='p-3'>
+            <Card.Title className='p-0 m-0'>
+              <p className='technology_card_title text-primary'>Front End</p>
+            </Card.Title>
 
-              <p className='lead text-primary-text'>
-                Technologies I am familiar with
+            <Card.Body className='p-0 m-0'>
+              <hr></hr>
+              <p>Languages: HTML, CSS/SCSS, Javascript</p>
+              <hr></hr>
+              <p>React</p>
+              <hr></hr>
+              <p>Redux & Context API</p>
+              <hr></hr>
+              <p>Bootstrap</p>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} lg={3} className='my-3'>
+          <Card className='p-3'>
+            <Card.Title className='p-0 m-0'>
+              <p className='technology_card_title text-primary'>Back End</p>
+            </Card.Title>
+
+            <Card.Body className='p-0 m-0'>
+              <hr></hr>
+              <p>Languages: NodeJs, Java</p>
+              <hr></hr>
+              <p>Express</p>
+              <hr></hr>
+              <p>Axios</p>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} lg={3} className='my-3'>
+          <Card className='p-3'>
+            <Card.Title className='p-0 m-0'>
+              <p className='technology_card_title text-primary'>Database</p>
+            </Card.Title>
+
+            <Card.Body className='p-0 m-0'>
+              <p>MongoDB</p>
+              <hr></hr>
+              <p>Mongoose</p>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} lg={3} className='my-3'>
+          <Card className='p-3'>
+            <Card.Title className='p-0 m-0'>
+              <p className='technology_card_title text-primary'>
+                Tools & Deployment
               </p>
-            </div>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology
-              icon={faReact}
-              text='React'
-              color='#61DBFB'
-            ></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology
-              icon={faHtml5}
-              text='HTML5'
-              color='#E44D26'
-            ></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faCss3} text='CSS3' color='#2965f1'></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faSass} text='SASS' color='#CD6799'></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology
-              icon={faBootstrap}
-              text='Bootstrap'
-              color='#602C50'
-            ></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology
-              icon={faJs}
-              text='Javascript'
-              color='#F0DB4F'
-            ></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology
-              icon={faNodeJs}
-              text='NodeJS'
-              color='#3C873A'
-            ></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faNpm} text='npm' color='#CC3534'></Technology>
-          </Col>
-          <Col xs={6} sm={4} lg={3}>
-            <Technology icon={faGit} text='Git' color='#F1502F'></Technology>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Card.Title>
+
+            <Card.Body className='p-0 m-0'>
+              <hr></hr>
+              <p>Git</p>
+              <hr></hr>
+              <p>npm</p>
+              <hr></hr>
+              <p>Heroku</p>
+              <hr></hr>
+              <p>Github Pages & Netlify</p>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }

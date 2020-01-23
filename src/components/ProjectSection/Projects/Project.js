@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap';
 import posed from 'react-pose';
+import uuid from 'uuid';
 
 const PosedCard = posed(Card)({
   hoverable: true,
@@ -19,7 +20,7 @@ const PosedCard = posed(Card)({
 });
 export default function Project({
   title = '',
-  image = require('../Images/project1.png'),
+  tech = [],
   modalContent = <></>,
   codeLink = '',
   demoLink = ''
@@ -45,11 +46,24 @@ export default function Project({
             <Card.Title className='text-primary project_title mb-3'>
               {title}
             </Card.Title>
+            <hr className='bg-light'></hr>
+            {tech.map(tec => (
+              <div key={uuid()}>
+                <p className='text-light'>{tec}</p>
+                <hr className='bg-light'></hr>
+              </div>
+            ))}
           </div>
         </Card.Body>
       </PosedCard>
 
-      <Modal show={modal} onHide={handleClose} centered>
+      <Modal
+        show={modal}
+        onHide={handleClose}
+        centered
+        className='project_modal'
+        size='lg'
+      >
         {modalContent}
         <Modal.Footer>
           <Button size='md' target='_blank' href={codeLink}>
