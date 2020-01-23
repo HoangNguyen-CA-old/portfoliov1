@@ -1,39 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Cover.scss';
-import posed from 'react-pose';
-
-const Parent = posed.div({
-  open: {
-    delayChildren: 100,
-    staggerChildren: 300
-  },
-  closed: { delay: 300 },
-  after: {}
-});
-const Name = posed.h1({
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      ease: 'easeInOut'
-    }
-  },
-  closed: { y: '-100%', opacity: 0 }
-});
-const Title = posed.h2({
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      ease: 'easeInOut'
-    }
-  },
-  closed: { y: '-100%', opacity: 0 }
-});
-const Warn = posed.p({
-  open: { y: 0, opacity: 1 },
-  closed: { y: '-100%', opacity: 0 }
-});
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import DeveloperSVG from './web_developer_SVG';
 
 export default function Cover() {
   const [animate, setAnimate] = useState(false);
@@ -45,12 +12,31 @@ export default function Cover() {
   }, []);
 
   return (
-    <div className='cover'>
-      <Parent className='' pose={animate ? 'open' : 'closed'}>
-        <Name className='text-light display-2'>Hoang Nguyen</Name>
-        <Title className='text-light'>Full-Stack Developer</Title>
-      </Parent>
-    </div>
+    <Container fluid={true} className='bg-primary-light m-0 p-0' id='cover'>
+      <Row className='p-0 m-0 w-100 h-100'>
+        <Col xs={12} md={7} className='p-0 m-0 bg-primary-dark cover_col'>
+          <div className='bg-lighter-dark' id='cover_left'>
+            <p className='text-primary' id='cover_name'>
+              Hoang Nguyen
+            </p>
+            <p className='text-light' id='cover_desc'>
+              Im a <span className='text-primary'>full-stack developer </span>
+              based in Toronto, Canada.
+            </p>
+            <div id='cover_button_container'>
+              <Button className='mr-4 text-dark'>Projects</Button>
+              <Button className='bg-transparent border-secondary text-light'>
+                Contact
+              </Button>
+            </div>
+          </div>
+        </Col>
+        <Col xs={12} md={5} className='p-0 m-0 cover_col'>
+          <div className='bg-dark' id='cover_right'>
+            <DeveloperSVG></DeveloperSVG>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
-//<Warn className='text-danger'>Site In Development</Warn>

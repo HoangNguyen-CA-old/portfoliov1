@@ -19,7 +19,6 @@ const PosedCard = posed(Card)({
 });
 export default function Project({
   title = '',
-  desc = '',
   image = require('../Images/project1.png'),
   modalContent = <></>,
   codeLink = '',
@@ -39,25 +38,13 @@ export default function Project({
       <PosedCard
         onPressEnd={handleOpen}
         border='primary'
-        className='text-dark bg-light m-2 project_card'
+        className='text-dark bg-lighter-dark project_card'
       >
-        <Card.Body className='text-center p-2'>
-          <Card.Img
-            src={image}
-            alt='Picture'
-            style={{ height: '60%' }}
-            className='border border-primary p-1 project_img bg-dark'
-          />
-          <div
-            style={{
-              height: '40%'
-            }}
-            className='vertical_center'
-          >
-            <Card.Title className='text-success project_title'>
+        <Card.Body className='text-center project_card_body'>
+          <div className='my-3'>
+            <Card.Title className='text-primary project_title mb-3'>
               {title}
             </Card.Title>
-            <Card.Subtitle className='project_desc'>{desc}</Card.Subtitle>
           </div>
         </Card.Body>
       </PosedCard>

@@ -3,23 +3,6 @@ import './ContactForm.scss';
 import { Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import posed from 'react-pose';
-
-const PosedButton = posed(Button)({
-  hoverable: true,
-  init: {},
-  hover: {}
-});
-
-let PosedDiv = posed.div({
-  hoverable: true,
-  init: {
-    color: 'gray'
-  },
-  hover: {
-    color: 'red'
-  }
-});
 
 export default function ContactForm() {
   return (
@@ -50,28 +33,32 @@ export default function ContactForm() {
         ></Form.Control>
       </Form.Group>
       <div className='submit_container'>
-        <PosedButton variant='primary' type='submit' className='submit_button'>
+        <Button
+          variant='primary'
+          type='submit'
+          className='submit_button text-dark'
+        >
           Send Message
-        </PosedButton>
+        </Button>
         <div className='icon_container'>
           <a href='https://github.com/HoangNguyen-CA' target='_blank'>
-            <PosedDiv className='icon_div'>
+            <div className='icon_div'>
               <FontAwesomeIcon
                 icon={faGithub}
                 className='contact_icon github_icon'
               ></FontAwesomeIcon>
-            </PosedDiv>
+            </div>
           </a>
           <a
             href='https://www.linkedin.com/in/hoang-nguyen-a36636196/'
             target='_blank'
           >
-            <PosedDiv className='icon_div'>
+            <div className='icon_div'>
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className='contact_icon linkedin_icon ml-3'
               />
-            </PosedDiv>
+            </div>
           </a>
         </div>
       </div>

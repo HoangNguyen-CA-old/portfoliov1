@@ -24,18 +24,19 @@ $teal: #20c997;
 $cyan: #1f9bcf;
 
 $theme-colors: (
-  primary-light: $gray-300,
-  contact: $cyan
+  primary-light: #c4f2ce,
+  primary-dark: #479158,
+  lighter-dark: #5b5656
 ); //Custom theme colors
 
-$primary: $gray-900; //bg-primary overriden in bootswatch.scss watch out
-$secondary: $white;
+$primary: #7fcd91; //bg-primary overriden in bootswatch.scss watch out
+$secondary: #f5eaea;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
-$light: $white;
-$dark: $gray-800;
+$light: #f5eaea;
+$dark: #4d4646;
 
 $yiq-contrasted-threshold: 185 !default;
 
