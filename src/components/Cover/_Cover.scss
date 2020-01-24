@@ -1,5 +1,5 @@
 #cover {
-  max-height: 1000px;
+  max-height: 700px;
   min-height: 500px;
   height: 100vh;
   overflow: hidden;
@@ -64,13 +64,15 @@
 @include media-breakpoint-up(md) {
   #developer_svg {
     position: absolute;
-    width: 30rem;
     height: auto;
-    top: 9em;
-    left: -8em;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: -10em;
   }
   #cover_button_container {
-    margin-top: 5rem;
+    position: absolute;
+    bottom: 10em;
   }
   #cover_desc {
     margin: 1em 0em 0em 0em;

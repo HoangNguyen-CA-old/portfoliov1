@@ -7,13 +7,14 @@ import Project from './Projects/Project';
 export default function ProjectSection() {
   return (
     <Container fluid={true} className='bg-light' id='project_link'>
+      <div id='layer' className='bg-light'></div>
       <Row className='p-0 m-0 text-center'>
         <Col xs={12} className='mb-5'>
           <p className='text-primary' id='projects_header'>
             Projects
           </p>
 
-          <p className='lead text-lighter-dark'>
+          <p className='lead text-lighter-dark' id='projects_desc'>
             Here are a few projects that I have worked on in the past
           </p>
           <hr></hr>
