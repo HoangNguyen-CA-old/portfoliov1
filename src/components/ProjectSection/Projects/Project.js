@@ -46,11 +46,10 @@ export default function Project({
             <Card.Title className='text-primary project_title mb-3'>
               {title}
             </Card.Title>
-            <hr className='bg-light'></hr>
             {tech.map(tec => (
               <div key={uuid()}>
-                <p className='text-light'>{tec}</p>
                 <hr className='bg-light'></hr>
+                <p className='text-light'>{tec}</p>
               </div>
             ))}
           </div>

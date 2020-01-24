@@ -52,6 +52,7 @@ export default function Technologies() {
             </Card.Title>
 
             <Card.Body className='p-0 m-0'>
+              <hr></hr>
               <p>MongoDB</p>
               <hr></hr>
               <p>Mongoose</p>

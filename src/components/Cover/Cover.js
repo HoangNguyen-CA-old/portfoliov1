@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import DeveloperSVG from './web_developer_SVG';
+import { Link } from 'react-scroll';
 
 export default function Cover() {
   return (
@@ -16,15 +17,27 @@ export default function Cover() {
               based in Toronto, Canada.
             </p>
             <div id='cover_button_container'>
-              <Button className='mr-4 text-dark' href='#project_link'>
-                Projects
-              </Button>
-              <Button
-                className='bg-transparent border-secondary text-light'
-                href='#contact_link'
+              <Link
+                to='project_link'
+                spy={false}
+                smooth={true}
+                duration={600}
+                className='smooth_scroll_link'
               >
-                Contact
-              </Button>
+                <Button className='mr-4 text-dark'>Projects</Button>
+              </Link>
+
+              <Link
+                to='contact_link'
+                spy={false}
+                smooth={true}
+                duration={600}
+                className='smooth_scroll_link'
+              >
+                <Button className='bg-transparent border-secondary text-light'>
+                  Contact
+                </Button>
+              </Link>
             </div>
           </div>
         </Col>
