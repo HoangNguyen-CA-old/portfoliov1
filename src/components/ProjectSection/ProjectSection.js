@@ -19,7 +19,12 @@ export default function ProjectSection() {
           </p>
           <hr></hr>
         </Col>
-        <Col xs={6} md={4} className='p-0 m-0 d-flex justify-content-center'>
+        <Col
+          xs={12}
+          sm={6}
+          md={4}
+          className='p-0 m-0 d-flex justify-content-center'
+        >
           <Project
             title='Shopping List App'
             tech={['React', 'Express', 'Redux', 'MongoDB']}
@@ -28,7 +33,12 @@ export default function ProjectSection() {
             demoLink='https://fierce-bayou-18494.herokuapp.com/'
           ></Project>
         </Col>
-        <Col xs={6} md={4} className='p-0 m-0 d-flex justify-content-center'>
+        <Col
+          xs={12}
+          sm={6}
+          md={4}
+          className='p-0 m-0 d-flex justify-content-center'
+        >
           <Project
             title='Name Analyzer App'
             modalContent={<Project1></Project1>}

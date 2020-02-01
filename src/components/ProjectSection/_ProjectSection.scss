@@ -1,6 +1,6 @@
 #project_link {
   position: relative;
-  padding: 5em 5em;
+  padding: 2rem 2rem;
   border: 0;
   background-size: cover;
   background-image: url('./projects_background.jpg');
@@ -28,11 +28,36 @@
   overflow: hidden;
   object-fit: cover;
 }
+.project_card {
+  height: auto;
+}
+
+.project_modal {
+  max-width: none !important;
+}
+
+.project_modal img {
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.project_title {
+  font-size: 1.3rem;
+}
+.project_tech {
+  font-size: 1rem;
+}
+
+.project_desc {
+  font-size: 1.1rem;
+}
 
 @include media-breakpoint-up(xs) {
   .project_card {
     width: 12rem;
-    height: 18rem;
   }
   .project_img {
     width: 10em;
@@ -42,7 +67,6 @@
 @include media-breakpoint-up(sm) {
   .project_card {
     width: 16rem;
-    height: 20rem;
   }
   .project_img {
     width: 15em;
@@ -52,7 +76,6 @@
 @include media-breakpoint-up(md) {
   .project_card {
     width: 14rem;
-    height: 20rem;
   }
   .project_img {
     width: 13em;
@@ -62,7 +85,6 @@
 @include media-breakpoint-up(lg) {
   .project_card {
     width: 16rem;
-    height: 20rem;
   }
   .project_img {
     width: 15em;
@@ -72,7 +94,6 @@
 @include media-breakpoint-up(xl) {
   .project_card {
     width: 17rem;
-    height: 20rem;
   }
   .project_img {
     width: 15em;

@@ -16,30 +16,33 @@ export default function Navigationbar() {
         <Nav className='ml-auto'>
           <Link
             to='project_link'
-            spy={false}
+            spy={true}
             smooth={true}
             duration={600}
-            className='smooth_scroll_link'
+            className='smooth_scroll_link nav-link'
+            href=''
           >
-            <Nav.Link className='px-4'>Projects</Nav.Link>
+            Projects
           </Link>
           <Link
             to='technology_link'
+            spy={true}
             smooth={true}
             duration={600}
-            className='smooth_scroll_link'
+            className='smooth_scroll_link nav-link'
+            href=''
           >
-            <Nav.Link className='px-4'>Skills</Nav.Link>
+            Skills
           </Link>
-
           <Link
             to='contact_link'
-            spy={false}
+            spy={true}
             smooth={true}
             duration={600}
-            className='smooth_scroll_link'
+            className='smooth_scroll_link nav-link'
+            href=''
           >
-            <Nav.Link className='px-4'>Contact</Nav.Link>
+            Contact
           </Link>
         </Nav>
       </Navbar.Collapse>
