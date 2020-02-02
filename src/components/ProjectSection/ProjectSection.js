@@ -9,7 +9,7 @@ export default function ProjectSection() {
     <Container fluid={true} className='bg-light' id='project_link'>
       <div id='layer' className='bg-light'></div>
       <Row className='p-0 m-0 text-center'>
-        <Col xs={12} className='mb-5'>
+        <Col xs={12} className=''>
           <p className='text-primary' id='projects_header'>
             Projects
           </p>

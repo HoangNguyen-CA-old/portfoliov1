@@ -55,48 +55,32 @@
   font-size: 1.1rem;
 }
 
+.project_card {
+  margin: 2rem;
+}
+
 @include media-breakpoint-up(xs) {
   .project_card {
-    width: 12rem;
-  }
-  .project_img {
-    width: 10em;
-    height: 9em;
+    width: 18em;
   }
 }
 @include media-breakpoint-up(sm) {
   .project_card {
     width: 16rem;
   }
-  .project_img {
-    width: 15em;
-    height: 13em;
-  }
 }
 @include media-breakpoint-up(md) {
   .project_card {
-    width: 14rem;
-  }
-  .project_img {
-    width: 13em;
-    height: 13em;
+    width: 16rem;
   }
 }
 @include media-breakpoint-up(lg) {
   .project_card {
     width: 16rem;
   }
-  .project_img {
-    width: 15em;
-    height: 13em;
-  }
 }
 @include media-breakpoint-up(xl) {
   .project_card {
     width: 17rem;
-  }
-  .project_img {
-    width: 15em;
-    height: 13em;
   }
 }

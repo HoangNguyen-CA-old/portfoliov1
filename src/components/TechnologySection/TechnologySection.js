@@ -11,7 +11,7 @@ export default function Technologies() {
           </p>
           <hr className='mb-3 bg-light'></hr>
         </Col>
-        <Col xs={6} lg={3} className='my-3'>
+        <Col xs={12} sm={6} lg={3} className='my-3'>
           <Card className='p-3'>
             <Card.Title className='p-0 m-0'>
               <p className='technology_card_title text-primary'>Front End</p>
@@ -29,7 +29,7 @@ export default function Technologies() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} lg={3} className='my-3'>
+        <Col xs={12} sm={6} lg={3} className='my-3'>
           <Card className='p-3'>
             <Card.Title className='p-0 m-0'>
               <p className='technology_card_title text-primary'>Back End</p>
@@ -45,7 +45,7 @@ export default function Technologies() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} lg={3} className='my-3'>
+        <Col xs={12} sm={6} lg={3} className='my-3'>
           <Card className='p-3'>
             <Card.Title className='p-0 m-0'>
               <p className='technology_card_title text-primary'>Database</p>
@@ -59,7 +59,7 @@ export default function Technologies() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} lg={3} className='my-3'>
+        <Col xs={12} sm={6} lg={3} className='my-3'>
           <Card className='p-3'>
             <Card.Title className='p-0 m-0'>
               <p className='technology_card_title text-primary'>

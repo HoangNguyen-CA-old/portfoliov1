@@ -5,5 +5,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4em 7em;
+}
+
+@include media-breakpoint-up(xs) {
+  #contact_link {
+    padding: 3rem 10%;
+  }
+}
+@include media-breakpoint-up(md) {
+  #contact_link {
+    padding: 3rem 20%;
+  }
 }
