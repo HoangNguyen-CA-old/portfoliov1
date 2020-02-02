@@ -1,6 +1,5 @@
 #cover {
-  max-height: 700px;
-  min-height: 500px;
+  max-height: 1080px;
   height: 100vh;
   overflow: hidden;
 }
@@ -34,6 +33,9 @@
 }
 
 @include media-breakpoint-up(xs) {
+  #cover {
+    min-height: 500px;
+  }
   #developer_svg {
     position: absolute;
     width: 25rem;
@@ -55,10 +57,17 @@
 
   #cover_left {
     padding: 3em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .cover_col {
     height: 50%;
   }
+}
+
+#cover_content_div {
 }
 
 @include media-breakpoint-up(md) {
@@ -82,6 +91,39 @@
   }
   #cover_left {
     padding: 5em 7em;
+    display: relative;
+  }
+  .cover_col {
+    height: 100%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #cover {
+    min-height: 640px;
+  }
+  #developer_svg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    left: -100px;
+    right: 0;
+    top: 10%;
+  }
+  #cover_button_container {
+    position: absolute;
+    bottom: 10em;
+  }
+  #cover_desc {
+    margin: 1em 0em 0em 0em;
+  }
+  #cover {
+    text-align: start;
+  }
+  #cover_left {
+    padding: 5em 7em;
+    display: relative;
   }
   .cover_col {
     height: 100%;

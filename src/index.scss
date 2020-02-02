@@ -45,11 +45,6 @@
 }
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 16px;
-  }
-}
-@include media-breakpoint-up(xl) {
-  html {
     font-size: 18px;
   }
 }

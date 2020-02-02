@@ -9,35 +9,37 @@ export default function Cover() {
       <Row className='p-0 m-0 w-100 h-100'>
         <Col xs={12} md={7} className='p-0 m-0 bg-primary-dark cover_col'>
           <div className='bg-lighter-dark' id='cover_left'>
-            <p className='text-primary' id='cover_name'>
-              Hoang Nguyen
-            </p>
-            <p className='text-light' id='cover_desc'>
-              Im a <span className='text-primary'>full-stack developer </span>
-              based in Toronto, Canada.
-            </p>
-            <div id='cover_button_container'>
-              <Link
-                to='project_link'
-                spy={false}
-                smooth={true}
-                duration={600}
-                className='smooth_scroll_link'
-              >
-                <Button className='mr-4 text-dark'>Projects</Button>
-              </Link>
+            <div id='cover_content_div'>
+              <p className='text-primary' id='cover_name'>
+                Hoang Nguyen
+              </p>
+              <p className='text-light' id='cover_desc'>
+                Im a <span className='text-primary'>full-stack developer </span>
+                based in Toronto, Canada.
+              </p>
+              <div id='cover_button_container'>
+                <Link
+                  to='project_link'
+                  spy={false}
+                  smooth={true}
+                  duration={600}
+                  className='smooth_scroll_link'
+                >
+                  <Button className='mr-4 text-dark'>Projects</Button>
+                </Link>
 
-              <Link
-                to='contact_link'
-                spy={false}
-                smooth={true}
-                duration={600}
-                className='smooth_scroll_link'
-              >
-                <Button className='bg-transparent border-secondary text-light'>
-                  Contact
-                </Button>
-              </Link>
+                <Link
+                  to='contact_link'
+                  spy={false}
+                  smooth={true}
+                  duration={600}
+                  className='smooth_scroll_link'
+                >
+                  <Button className='bg-transparent border-secondary text-light'>
+                    Contact
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </Col>
