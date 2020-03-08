@@ -39,7 +39,7 @@ export default function Project({
       <PosedCard
         onPressEnd={handleOpen}
         border='primary'
-        className='text-dark bg-lighter-dark project_card'
+        className='text-dark project_card'
       >
         <Card.Body className='text-center project_card_body'>
           <div className='my-3'>

@@ -15,7 +15,7 @@ export default function ProjectSection() {
           </p>
 
           <p className='lead text-lighter-dark' id='projects_desc'>
-            Here are a few projects that I have worked on in the past
+            Here are a few projects that I have recently worked on:
           </p>
           <hr></hr>
         </Col>

@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 export default function Footer() {
   return (
     <Container fluid={true} className='footer_container bg-dark'>
-      Copyright © Hoang Nguyen 2019
+      Copyright © Hoang Nguyen 2020
     </Container>
   );
 }
