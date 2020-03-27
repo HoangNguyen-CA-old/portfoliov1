@@ -1,12 +1,24 @@
 import React from 'react';
-
 import { Container, Row, Col } from 'react-bootstrap';
-import ContactForm from './ContactForm/ContactForm';
+import ContactForm from './ContactForm';
+import styled from 'styled-components';
+
+const Header = styled.h1`
+  font-size: 2rem;
+`;
+
+const MainContainer = styled.div`
+  padding: 3rem 5rem;
+`;
 
 export default function Contact() {
   return (
-    <Container fluid={true} className='bg-light text-blue' id='contact_link'>
-      <h6 className='contact_header text-dark text-center'>Contact</h6>
+    <MainContainer
+      fluid={true}
+      className='bg-light text-blue'
+      id='contact_link'
+    >
+      <Header className='text-dark text-center'>Contact</Header>
       <hr></hr>
       <Container>
         <Row>
@@ -15,6 +27,6 @@ export default function Contact() {
           </Col>
         </Row>
       </Container>
-    </Container>
+    </MainContainer>
   );
 }

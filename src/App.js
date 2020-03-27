@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.scss';
 import Cover from './components/Cover/Cover';
-import Navbar from './components/Navbar/NavigationBar';
+import Navbar from './components/NavigationBar';
 import ProjectSection from './components/ProjectSection/ProjectSection';
-import Footer from './components/Footer/Footer';
-import TechnologySection from './components/TechnologySection/TechnologySection';
+import Footer from './components/Footer';
+import Skills from './components/Skills';
 import Contact from './components/Contact/Contact';
 
 export default function App() {
@@ -13,7 +12,7 @@ export default function App() {
       <Cover />
       <Navbar />
       <ProjectSection />
-      <TechnologySection />
+      <Skills />
       <hr className='m-0 p-0 bg-danger'></hr>
       <Contact />
       <Footer />
