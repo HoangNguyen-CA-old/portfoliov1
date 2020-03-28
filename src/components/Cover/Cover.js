@@ -1,54 +1,139 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import DeveloperSVG from './web_developer_SVG';
+import { Button } from 'react-bootstrap';
+import DEV from './web_developer_SVG';
 import { Link } from 'react-scroll';
+import styled from 'styled-components';
+import { device, theme } from '../../variables';
+
+const MainContainer = styled.div`
+  display: grid;
+  grid-template-columns: 100%;
+  min-height: 500px;
+
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  grid-template-rows: 30% 70%;
+  max-height: 500px;
+  @media ${device.laptop} {
+    text-align: start;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 30% 70%;
+    min-height: 600px;
+    max-height: 750px;
+  }
+`;
+
+const Name = styled.h1`
+  font-size: 5rem;
+  color: ${theme.primary};
+  padding-top: 10rem;
+  overflow: visible;
+  @media ${device.laptop} {
+    padding-top: 5rem;
+    margin-top: 2rem;
+    font-size: 5rem;
+    position: absolute;
+  }
+  z-index: 2;
+`;
+
+const Desc = styled.p`
+  font-size: 1.5rem;
+  color: ${theme.secondary};
+`;
+
+const HighLight = styled.span`
+  color: ${theme.primary};
+  font-size: inherit;
+`;
+
+const LeftDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+
+  overflow: visible;
+  z-index: 5;
+
+  background-color: ${theme.dark};
+  grid-row: 1/2;
+  @media ${device.laptop} {
+  }
+`;
+
+const BottomDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-row: 2/3;
+  position: relative;
+  background-color: ${theme.dark};
+  padding: 3rem 10%;
+  @media ${device.tablet} {
+    padding: 3rem 20%;
+  }
+  @media ${device.laptop} {
+    padding: 3rem 10rem 3rem 3rem;
+  }
+`;
+
+const RightDiv = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: ${theme.lighterDark};
+  display: none;
+  @media ${device.laptop} {
+    display: block;
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 1rem;
+`;
 
 export default function Cover() {
   return (
-    <Container fluid={true} className='bg-primary-light m-0 p-0' id='cover'>
-      <Row className='p-0 m-0 w-100 h-100'>
-        <Col xs={12} md={7} className='p-0 m-0 bg-primary-dark cover_col'>
-          <div className='bg-lighter-dark' id='cover_left'>
-            <div id='cover_content_div'>
-              <p className='text-primary' id='cover_name'>
-                Hoang Nguyen
-              </p>
-              <p className='text-light' id='cover_desc'>
-                Im a <span className='text-primary'>full-stack developer </span>
-                based in Toronto, Canada.
-              </p>
-              <div id='cover_button_container'>
-                <Link
-                  to='project_link'
-                  spy={false}
-                  smooth={true}
-                  duration={600}
-                  className='smooth_scroll_link'
-                >
-                  <Button className='mr-4 text-dark'>Projects</Button>
-                </Link>
+    <MainContainer fluid={true}>
+      <LeftDiv>
+        <Name>Hoang Nguyen</Name>
+      </LeftDiv>
+      <RightDiv>
+        <DEV></DEV>
+      </RightDiv>
+      <BottomDiv>
+        <Desc>
+          Im a <HighLight>full-stack developer </HighLight>
+          based in Toronto, Canada. I'm always looking for new opportunities to
+          improve on my existing skill set.
+        </Desc>
+        <ButtonContainer>
+          <Link
+            to='project_link'
+            spy={false}
+            smooth={true}
+            duration={600}
+            className='smooth_scroll_link'
+          >
+            <Button className='mr-4 text-dark'>Projects</Button>
+          </Link>
 
-                <Link
-                  to='contact_link'
-                  spy={false}
-                  smooth={true}
-                  duration={600}
-                  className='smooth_scroll_link'
-                >
-                  <Button className='bg-transparent border-secondary text-light'>
-                    Contact
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Col>
-        <Col xs={12} md={5} className='p-0 m-0 cover_col'>
-          <div className='bg-dark' id='cover_right'>
-            <DeveloperSVG></DeveloperSVG>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+          <Link to='contact_link' spy={false} smooth={true} duration={600}>
+            <Button className='bg-transparent border-secondary text-light'>
+              Contact
+            </Button>
+          </Link>
+        </ButtonContainer>
+      </BottomDiv>
+    </MainContainer>
   );
 }

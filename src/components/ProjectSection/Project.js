@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap';
 import uuid from 'uuid';
+import styled from 'styled-components';
+import { theme } from '../../variables';
+
+const CustomCard = styled(Card)`
+  background-color: ${theme.dark};
+`;
 
 export default function Project({
   title = '',
@@ -20,11 +26,7 @@ export default function Project({
 
   return (
     <>
-      <Card
-        onPressEnd={handleOpen}
-        border='primary'
-        className='text-dark project_card bg-dark'
-      >
+      <CustomCard>
         <Card.Body className='text-center project_card_body'>
           <div className='my-3'>
             <Card.Title className='text-primary project_title mb-3'>
@@ -38,7 +40,7 @@ export default function Project({
             ))}
           </div>
         </Card.Body>
-      </Card>
+      </CustomCard>
 
       <Modal
         show={modal}

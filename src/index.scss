@@ -1,12 +1,6 @@
 @import './lux/variables';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import './lux/bootswatch';
-@import './components/Cover/Cover';
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 @font-face {
   font-family: 'Varela';
@@ -23,25 +17,4 @@
 @font-face {
   font-family: 'Muli-ExtraLight';
   src: url('./fonts/Muli-ExtraLight.ttf') format('truetype');
-}
-
-@include media-breakpoint-up(xs) {
-  html {
-    font-size: 12px;
-  }
-}
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 12px;
-  }
-}
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 14px;
-  }
-}
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 18px;
-  }
 }

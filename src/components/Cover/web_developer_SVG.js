@@ -1,14 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+import { device } from '../../variables';
+
+const SVG = styled.svg`
+  position: absolute;
+  width: 35rem;
+  top: 0rem;
+  left: -10rem;
+  z-index: 1;
+`;
 
 export default function web_developer() {
   return (
-    <svg
+    <SVG
       width='1077'
       height='756'
       viewBox='0 0 1077 756'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      id='developer_svg'
     >
       <rect width='1077' height='756' />
       <g id='undraw_web_developer_p3e5 1'>
@@ -256,6 +265,6 @@ export default function web_developer() {
           <rect width='1076.06' height='755.228' fill='white' />
         </clipPath>
       </defs>
-    </svg>
+    </SVG>
   );
 }
