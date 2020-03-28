@@ -64,7 +64,6 @@ export default function App() {
       <Navbar />
       <ProjectSection />
       <Skills />
-      <hr className='m-0 p-0 bg-danger'></hr>
       <Contact />
       <Footer />
     </div>

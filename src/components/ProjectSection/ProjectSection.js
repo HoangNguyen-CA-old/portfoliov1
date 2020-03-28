@@ -1,28 +1,39 @@
 import React from 'react';
 import Project1 from './Projects/Project1Modal';
 import Project2 from './Projects/Project2Modal';
-import { Row, Col } from 'react-bootstrap';
 import Project from './Project';
 import styled from 'styled-components';
 import { device } from '../../variables';
 
 const MainContainer = styled.div`
   position: relative;
-  padding: 5rem 7rem;
+  padding: 3rem;
   border: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10%;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
   justify-content: center;
   align-content: center;
+  @media ${device.mobileL} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 const Header = styled.h1`
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: underline;
   margin-bottom: 2rem;
-  grid-column: 1/4;
+  grid-column: 1/2;
   text-align: center;
+  @media ${device.mobileM} {
+    grid-column: 1/3;
+  }
+  @media ${device.tablet} {
+    grid-column: 1/4;
+  }
 `;
 
 export default function ProjectSection() {

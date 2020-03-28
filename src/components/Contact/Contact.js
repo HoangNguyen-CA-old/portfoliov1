@@ -1,14 +1,20 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from './ContactForm';
 import styled from 'styled-components';
 
+const FormWrapper = styled.div`
+  grid-column: 2/3;
+`;
+
 const Header = styled.h1`
   font-size: 2rem;
+  grid-column: 1/4;
 `;
 
 const MainContainer = styled.div`
-  padding: 3rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  padding: 3rem;
 `;
 
 export default function Contact() {
@@ -19,14 +25,9 @@ export default function Contact() {
       id='contact_link'
     >
       <Header className='text-dark text-center'>Contact</Header>
-      <hr></hr>
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <ContactForm />
-          </Col>
-        </Row>
-      </Container>
+      <FormWrapper>
+        <ContactForm></ContactForm>
+      </FormWrapper>
     </MainContainer>
   );
 }
