@@ -3,21 +3,24 @@ import Project1 from './Projects/Project1Modal';
 import Project2 from './Projects/Project2Modal';
 import Project from './Project';
 import styled from 'styled-components';
-import { device } from '../../variables';
+import { breakpoint1, breakpoint2 } from './localvars';
 
 const MainContainer = styled.div`
+  overflow: hidden;
   position: relative;
-  padding: 3rem;
+  padding: 3rem 6rem;
   border: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
   justify-content: center;
+  justify-items: center;
   align-content: center;
-  @media ${device.mobileL} {
+
+  @media ${breakpoint1} {
     grid-template-columns: 1fr 1fr;
   }
-  @media ${device.tablet} {
+  @media ${breakpoint2} {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
@@ -28,10 +31,10 @@ const Header = styled.h1`
   margin-bottom: 2rem;
   grid-column: 1/2;
   text-align: center;
-  @media ${device.mobileM} {
+  @media ${breakpoint1} {
     grid-column: 1/3;
   }
-  @media ${device.tablet} {
+  @media ${breakpoint2} {
     grid-column: 1/4;
   }
 `;
@@ -50,6 +53,13 @@ export default function ProjectSection() {
         demoLink='https://fierce-bayou-18494.herokuapp.com/'
       ></Project>
 
+      <Project
+        title='Name Analyzer App'
+        modalContent={<Project1></Project1>}
+        tech={['React', 'Axios', 'Bootstrap', 'Context API']}
+        codeLink='https://github.com/HoangNguyen-CA/name-analyzer'
+        demoLink='https://hoangnguyen-ca.github.io/name-analyzer/'
+      ></Project>
       <Project
         title='Name Analyzer App'
         modalContent={<Project1></Project1>}

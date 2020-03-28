@@ -20,10 +20,13 @@ export const device = {
 };
 
 export const theme = {
+  lighterPrimary: '#a5dcb2',
+  darkerPrimary: '#599066',
   primary: '#7fcd91',
   secondary: '#f5eaea',
   white: '#000000',
   black: '#ffffff',
   dark: '#4d4646',
-  lighterDark: '#5b5656'
+  lighterDark: '#5b5656',
+  darkerDark: '#363131'
 };

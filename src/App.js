@@ -3,7 +3,7 @@ import Cover from './components/Cover/Cover';
 import Navbar from './components/NavigationBar';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import Footer from './components/Footer';
-import Skills from './components/Skills';
+import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 import { createGlobalStyle } from 'styled-components';
 import { device } from './variables';
@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
 *{
   margin:0px;
   padding:0px;
+}
+html{
+  font-size:10px;
 }
 
 @media ${device.mobileS}{

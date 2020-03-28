@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
-import { device } from '../variables';
+import { device } from '../../variables';
 
 const MainContainer = styled.div`
   padding: 3rem;

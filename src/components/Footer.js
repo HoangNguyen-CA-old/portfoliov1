@@ -11,7 +11,7 @@ const MainContainer = styled.div`
 
 export default function Footer() {
   return (
-    <MainContainer fluid={true} className='footer_container bg-dark'>
+    <MainContainer fluid={true} className='bg-dark'>
       Copyright © Hoang Nguyen 2020
     </MainContainer>
   );

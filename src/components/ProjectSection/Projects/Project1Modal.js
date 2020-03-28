@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
-
+import { ProjectImage } from './Styles';
 //Nested inside a Modal
 export default function Project1Modal() {
   return (
@@ -16,7 +16,10 @@ export default function Project1Modal() {
           information (age, gender, nationality) based on their first name.
         </p>
       </Modal.Body>
-      <img src={require('../Images/name-analyzer1.png')} alt='project ui'></img>
+      <ProjectImage
+        src={require('../Images/name-analyzer1.png')}
+        alt='project ui'
+      ></ProjectImage>
     </>
   );
 }

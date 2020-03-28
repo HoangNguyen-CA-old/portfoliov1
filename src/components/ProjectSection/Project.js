@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-import { Card, Button, Modal } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import uuid from 'uuid';
 import styled from 'styled-components';
 import { theme } from '../../variables';
+import { motion } from 'framer-motion';
+import { breakpoint1, breakpoint2 } from './localvars';
 
-const CustomCard = styled(Card)`
+const CustomCard = styled(motion.div)`
   background-color: ${theme.dark};
+  padding: 1rem;
+  width: 20rem;
+  border: 2px solid ${theme.darkerDark};
+  @media ${breakpoint1} {
+  }
+  @media ${breakpoint2} {
+    width: 18rem;
+  }
+`;
+const Title = styled.h3`
+  font-size: 1.3rem;
 `;
 
 export default function Project({
@@ -26,20 +39,20 @@ export default function Project({
 
   return (
     <>
-      <CustomCard>
-        <Card.Body className='text-center project_card_body'>
-          <div className='my-3'>
-            <Card.Title className='text-primary project_title mb-3'>
-              {title}
-            </Card.Title>
-            {tech.map(tec => (
-              <div key={uuid()}>
-                <hr className='bg-light'></hr>
-                <p className='text-light'>{tec}</p>
-              </div>
-            ))}
-          </div>
-        </Card.Body>
+      <CustomCard
+        onClick={handleOpen}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <div className='my-3'>
+          <Title className='text-primary mb-3'>{title}</Title>
+          {tech.map(tec => (
+            <div key={uuid()}>
+              <hr className='bg-light'></hr>
+              <p className='text-light'>{tec}</p>
+            </div>
+          ))}
+        </div>
       </CustomCard>
 
       <Modal
