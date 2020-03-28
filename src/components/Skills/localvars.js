@@ -1,5 +1,6 @@
 import { device } from '../../variables';
 
-export const breakpoint1 = device.tablet;
-
-export const breakpoint2 = device.laptop;
+export const breakpoints = {
+  1: device.tablet,
+  2: device.laptop
+};
