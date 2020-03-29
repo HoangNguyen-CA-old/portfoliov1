@@ -33,7 +33,7 @@ const Name = styled.h1`
   margin-top: 12rem;
 
   @media ${breakpoints[2]} {
-    margin-top: 7rem;
+    margin-top: 5rem;
     position: absolute;
   }
   @media ${breakpoints[3]} {
@@ -75,13 +75,13 @@ const BottomDiv = styled.div`
   height: 100%;
   grid-row: 2/3;
   position: relative;
-  background-color: ${theme.dark};
+  background-color: ${theme.darkerDark};
   padding: 3rem 10%;
   @media ${breakpoints[1]} {
     padding: 3rem 20%;
   }
   @media ${breakpoints[2]} {
-    padding: 3rem 10rem 3rem 3rem;
+    padding: 3rem 10rem 3rem 4rem;
   }
 `;
 

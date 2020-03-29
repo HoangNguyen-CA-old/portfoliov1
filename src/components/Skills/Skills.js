@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
 import { breakpoints } from './localvars';
 import { theme } from '../../variables';
@@ -40,6 +39,7 @@ const CustomCard = styled.div`
   background-color: ${theme.secondary};
   padding: 1rem;
   width: 20rem;
+  border: 2px solid ${theme.darkerSecondary};
   @media ${breakpoints[1]} {
     width: 22rem;
   }
@@ -56,7 +56,7 @@ export default function Technologies() {
         <CardTitle>Front End</CardTitle>
 
         <hr></hr>
-        <p>Languages: HTML, CSS/SCSS, Javascript</p>
+        <p>Languages: HTML, CSS/SCSS, Javascript/Typescript</p>
         <hr></hr>
         <p>React</p>
         <hr></hr>

@@ -23,6 +23,7 @@ export const theme = {
   darkerPrimary: '#599066',
   primary: '#7fcd91',
   secondary: '#f5eaea',
+  darkerSecondary: '#938c8c',
   white: '#000000',
   black: '#ffffff',
   dark: '#4d4646',

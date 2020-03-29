@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ReducedMotion } from 'framer-motion';
 
 export const ProjectImage = styled.img`
   overflow: hidden;
