@@ -4,6 +4,7 @@ import DEV from './web_developer_SVG';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import { device, theme } from '../../variables';
+import { breakpoints } from './localvars';
 
 const MainContainer = styled.div`
   display: grid;
@@ -27,15 +28,17 @@ const MainContainer = styled.div`
 const Name = styled.h1`
   font-size: 5rem;
   color: ${theme.primary};
-  padding-top: 10rem;
   overflow: visible;
-  @media ${device.laptop} {
-    padding-top: 5rem;
-    margin-top: 2rem;
-    font-size: 5rem;
+  z-index: 2;
+  margin-top: 12rem;
+
+  @media ${breakpoints[2]} {
+    margin-top: 7rem;
     position: absolute;
   }
-  z-index: 2;
+  @media ${breakpoints[3]} {
+    margin-top: 10rem;
+  }
 `;
 
 const Desc = styled.p`
@@ -62,8 +65,6 @@ const LeftDiv = styled.div`
 
   background-color: ${theme.dark};
   grid-row: 1/2;
-  @media ${device.laptop} {
-  }
 `;
 
 const BottomDiv = styled.div`
@@ -76,10 +77,10 @@ const BottomDiv = styled.div`
   position: relative;
   background-color: ${theme.dark};
   padding: 3rem 10%;
-  @media ${device.tablet} {
+  @media ${breakpoints[1]} {
     padding: 3rem 20%;
   }
-  @media ${device.laptop} {
+  @media ${breakpoints[2]} {
     padding: 3rem 10rem 3rem 3rem;
   }
 `;
@@ -90,7 +91,7 @@ const RightDiv = styled.div`
   height: 100%;
   background-color: ${theme.lighterDark};
   display: none;
-  @media ${device.laptop} {
+  @media ${breakpoints[2]} {
     display: block;
     grid-column: 2/3;
     grid-row: 1/3;
@@ -112,7 +113,7 @@ export default function Cover() {
       </RightDiv>
       <BottomDiv>
         <Desc>
-          Im a <HighLight>full-stack developer </HighLight>
+          I am a <HighLight>full-stack developer </HighLight>
           based in Toronto, Canada. I'm always looking for new opportunities to
           improve on my existing skill set.
         </Desc>

@@ -1,20 +1,21 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 import styled from 'styled-components';
+import { breakpoints } from './localvars';
 
-const FormWrapper = styled.div`
-  grid-column: 2/3;
-`;
+const FormWrapper = styled.div``;
 
 const Header = styled.h1`
   font-size: 2rem;
-  grid-column: 1/4;
 `;
 
 const MainContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 3.5rem;
+  @media ${breakpoints[1]} {
+    padding: 3rem 20%;
+  }
 `;
 
 export default function Contact() {

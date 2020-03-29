@@ -11,6 +11,7 @@ const MainContainer = styled.div`
   grid-gap: 2rem;
   justify-items: center;
   justify-content: center;
+  align-content: center;
   @media ${breakpoints[1]} {
     grid-template-columns: 1fr 1fr;
   }
@@ -40,6 +41,7 @@ const CustomCard = styled.div`
   padding: 1rem;
   width: 20rem;
   @media ${breakpoints[1]} {
+    width: 22rem;
   }
   @media ${breakpoints[2]} {
     width: 13.5rem;

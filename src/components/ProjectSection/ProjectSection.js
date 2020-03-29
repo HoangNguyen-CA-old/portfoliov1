@@ -8,7 +8,7 @@ import { breakpoint1, breakpoint2 } from './localvars';
 const MainContainer = styled.div`
   overflow: hidden;
   position: relative;
-  padding: 3rem 6rem;
+  padding: 5rem 6rem;
   border: 0;
   display: grid;
   grid-template-columns: 1fr;

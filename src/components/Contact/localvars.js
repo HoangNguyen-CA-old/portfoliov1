@@ -1,7 +1,7 @@
 import { device } from '../../variables';
 
 export const breakpoints = {
-  1: device.tablet,
-  2: device.laptop,
-  3: device.laptopL
+  1: device.mobileL,
+  2: device.tablet,
+  3: device.laptop
 };

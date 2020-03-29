@@ -52,11 +52,6 @@ html{
     font-size: 18px;
   }
 }
-@media ${device.desktopL}{
-  html {
-    font-size: 20px;
-  }
-}
 `;
 
 export default function App() {
