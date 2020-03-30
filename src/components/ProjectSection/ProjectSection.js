@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Project1 from './Projects/Project1Modal';
 import Project2 from './Projects/Project2Modal';
 import Project from './Project';
 import styled from 'styled-components';
-import { breakpoint1, breakpoint2 } from './localvars';
+import { theme } from '../../variables';
+import { breakpoints } from './localvars';
+import { motion } from 'framer-motion';
+import ScrollTrigger from 'react-scroll-trigger';
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   overflow: hidden;
   position: relative;
-  padding: 5rem 6rem;
-  border: 0;
+  padding: 4rem 6rem;
+`;
+
+const Header = styled(motion.h1)`
+  opacity: 0; //animated to opacity:1
+  color: ${theme.darkerPrimary};
+  font-size: 3rem;
+  text-decoration: underline;
+  margin-bottom: 3rem;
+  text-align: center;
+`;
+
+const ProjectsWrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
@@ -17,56 +31,72 @@ const MainContainer = styled.div`
   justify-items: center;
   align-content: center;
 
-  @media ${breakpoint1} {
+  @media ${breakpoints[1]} {
     grid-template-columns: 1fr 1fr;
   }
-  @media ${breakpoint2} {
+  @media ${breakpoints[2]} {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
-const Header = styled.h1`
-  font-size: 3rem;
-  text-decoration: underline;
-  margin-bottom: 2rem;
-  grid-column: 1/2;
-  text-align: center;
-  @media ${breakpoint1} {
-    grid-column: 1/3;
+const headerVariant = {
+  open: {
+    opacity: 1
+  },
+  closed: {
+    opacity: 0
   }
-  @media ${breakpoint2} {
-    grid-column: 1/4;
+};
+
+const projectsVariant = {
+  open: {
+    transition: { delayChildren: 0.2, staggerChildren: 0.1 }
+  },
+  closed: {
+    transition: { staggerChildren: 0.04, staggerDirection: -1 }
   }
-`;
+};
 
 export default function ProjectSection() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleAnimate = () => {
+    setOpen(true);
+  };
   return (
-    <MainContainer fluid={true} id='project_link'>
-      <Header className='text-primary'>Projects</Header>
+    <MainContainer
+      inital={false}
+      animate={isOpen ? 'open' : 'closed'}
+      id='project_link'
+    >
+      <Header variants={headerVariant}>Projects</Header>
+      <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
 
-      <Project
-        className='bg-primary'
-        title='Shopping List App'
-        tech={['React', 'Express', 'Redux', 'MongoDB']}
-        modalContent={<Project2></Project2>}
-        codeLink='https://github.com/HoangNguyen-CA/shopping_list/'
-        demoLink='https://fierce-bayou-18494.herokuapp.com/'
-      ></Project>
+      <ProjectsWrapper variants={projectsVariant}>
+        <Project
+          title='Shopping List App'
+          tech={['React', 'Express', 'Redux', 'MongoDB']}
+          modalContent={<Project2></Project2>}
+          codeLink='https://github.com/HoangNguyen-CA/shopping_list/'
+          demoLink='https://fierce-bayou-18494.herokuapp.com/'
+        ></Project>
 
-      <Project
-        title='Name Analyzer App'
-        modalContent={<Project1></Project1>}
-        tech={['React', 'Axios', 'Bootstrap', 'Context API']}
-        codeLink='https://github.com/HoangNguyen-CA/name-analyzer'
-        demoLink='https://hoangnguyen-ca.github.io/name-analyzer/'
-      ></Project>
-      <Project
-        title='Name Analyzer App'
-        modalContent={<Project1></Project1>}
-        tech={['React', 'Axios', 'Bootstrap', 'Context API']}
-        codeLink='https://github.com/HoangNguyen-CA/name-analyzer'
-        demoLink='https://hoangnguyen-ca.github.io/name-analyzer/'
-      ></Project>
+        <Project
+          title='Name Analyzer App'
+          modalContent={<Project1></Project1>}
+          tech={['React', 'Axios', 'Bootstrap', 'Context API']}
+          codeLink='https://github.com/HoangNguyen-CA/name-analyzer'
+          demoLink='https://hoangnguyen-ca.github.io/name-analyzer/'
+        ></Project>
+        <Project
+          title='Name Analyzer App'
+          modalContent={<Project1></Project1>}
+          tech={['React', 'Axios', 'Bootstrap', 'Context API']}
+          codeLink='https://github.com/HoangNguyen-CA/name-analyzer'
+          demoLink='https://hoangnguyen-ca.github.io/name-analyzer/'
+        ></Project>
+      </ProjectsWrapper>
+      <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
     </MainContainer>
   );
 }

@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import { device, theme } from '../../variables';
 import { breakpoints } from './localvars';
+import { motion } from 'framer-motion';
 
 const MainContainer = styled.div`
   display: grid;
@@ -25,9 +26,9 @@ const MainContainer = styled.div`
   }
 `;
 
-const Name = styled.h1`
+const Name = styled(motion.h1)`
   font-size: 5rem;
-  color: ${theme.primary};
+  color: ${theme.lighterPrimary};
   overflow: visible;
   z-index: 2;
   margin-top: 12rem;

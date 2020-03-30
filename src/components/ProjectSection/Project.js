@@ -4,23 +4,35 @@ import uuid from 'uuid';
 import styled from 'styled-components';
 import { theme } from '../../variables';
 import { motion } from 'framer-motion';
-import { breakpoint1, breakpoint2 } from './localvars';
+import { breakpoints } from './localvars';
 
 const CustomCard = styled(motion.div)`
+  opacity: 0;
   background-color: ${theme.dark};
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   width: 20rem;
   border: 2px solid ${theme.darkerDark};
-  @media ${breakpoint1} {
+  @media ${breakpoints[1]} {
   }
-  @media ${breakpoint2} {
+  @media ${breakpoints[2]} {
     width: 18rem;
   }
 `;
 const Title = styled.h3`
   font-size: 1.3rem;
+  color: ${theme.primary};
 `;
 
+const CardText = styled.p`
+  color: ${theme.secondary};
+`;
+const Divider = styled.hr`
+  background-color: ${theme.secondary};
+  height: 0.02rem;
+  padding: 0;
+`;
+
+const variants = { open: { opacity: 1 }, closed: { opacity: 0 } };
 export default function Project({
   title = '',
   tech = [],
@@ -43,16 +55,15 @@ export default function Project({
         onClick={handleOpen}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
+        variants={variants}
       >
-        <div className='my-3'>
-          <Title className='text-primary mb-3'>{title}</Title>
-          {tech.map(tec => (
-            <div key={uuid()}>
-              <hr className='bg-light'></hr>
-              <p className='text-light'>{tec}</p>
-            </div>
-          ))}
-        </div>
+        <Title>{title}</Title>
+        {tech.map(text => (
+          <div key={uuid()}>
+            <Divider></Divider>
+            <CardText>{text}</CardText>
+          </div>
+        ))}
       </CustomCard>
 
       <Modal
