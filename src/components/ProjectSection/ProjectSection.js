@@ -15,7 +15,6 @@ const MainContainer = styled(motion.div)`
 `;
 
 const Header = styled(motion.h1)`
-  opacity: 0; //animated to opacity:1
   color: ${theme.darkerPrimary};
   font-size: 3rem;
   text-decoration: underline;
@@ -57,6 +56,10 @@ const projectsVariant = {
   }
 };
 
+const initial = { opacity: 0 };
+
+const headerTransition = { delay: 0.2 };
+
 export default function ProjectSection() {
   const [isOpen, setOpen] = useState(false);
 
@@ -69,7 +72,13 @@ export default function ProjectSection() {
       animate={isOpen ? 'open' : 'closed'}
       id='project_link'
     >
-      <Header variants={headerVariant}>Projects</Header>
+      <Header
+        variants={headerVariant}
+        initial={initial}
+        transition={headerTransition}
+      >
+        Projects
+      </Header>
       <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
 
       <ProjectsWrapper variants={projectsVariant}>

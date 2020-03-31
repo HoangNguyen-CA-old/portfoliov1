@@ -42,7 +42,7 @@ const Name = styled(motion.h1)`
   }
 `;
 
-const Desc = styled.p`
+const Desc = styled(motion.p)`
   font-size: 1.5rem;
   color: ${theme.secondary};
 `;
@@ -99,26 +99,38 @@ const RightDiv = styled.div`
   }
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(motion.div)`
   margin-top: 1rem;
 `;
+
+const animation = { opacity: 1, x: 0 };
+
+const transition = { duration: 0.7, delay: 0.3 };
+
+const initial = { opacity: 0, x: -5 };
 
 export default function Cover() {
   return (
     <MainContainer fluid={true}>
       <LeftDiv>
-        <Name>Hoang Nguyen</Name>
+        <Name animate={animation} initial={initial} transition={transition}>
+          Hoang Nguyen
+        </Name>
       </LeftDiv>
       <RightDiv>
         <DEV></DEV>
       </RightDiv>
       <BottomDiv>
-        <Desc>
+        <Desc animate={animation} initial={initial} transition={transition}>
           I am a <HighLight>full-stack developer </HighLight>
           based in Toronto, Canada. I'm always looking for new opportunities to
           improve on my existing skill set.
         </Desc>
-        <ButtonContainer>
+        <ButtonContainer
+          animate={animation}
+          initial={initial}
+          transition={transition}
+        >
           <Link
             to='project_link'
             spy={false}

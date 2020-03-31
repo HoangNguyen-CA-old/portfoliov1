@@ -11,7 +11,6 @@ const MainContainer = styled(motion.div)`
 `;
 
 const Header = styled(motion.h1)`
-  opacity: 0;
   color: ${theme.lighterPrimary};
   font-size: 3rem;
   text-align: center;
@@ -43,7 +42,6 @@ const SkillsWrapper = styled(motion.div)`
 `;
 
 const CustomCard = styled(motion.div)`
-  opacity: 0;
   background-color: ${theme.secondary};
   padding: 1rem;
   width: 20rem;
@@ -79,6 +77,10 @@ const skillVariant = {
   closed: { opacity: 0 }
 };
 
+const initial = { opacity: 0 };
+
+const headerTransition = { delay: 0.2 };
+
 export default function Technologies() {
   const [isOpen, setOpen] = useState(false);
 
@@ -92,10 +94,16 @@ export default function Technologies() {
       animate={isOpen ? 'open' : 'closed'}
       id='technology_link'
     >
-      <Header variants={headerVariant}>Skills</Header>
+      <Header
+        variants={headerVariant}
+        initial={initial}
+        transition={headerTransition}
+      >
+        Skills
+      </Header>
       <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
       <SkillsWrapper variants={skillsVariant}>
-        <CustomCard variants={skillVariant}>
+        <CustomCard variants={skillVariant} initial={initial}>
           <CardTitle>Front End</CardTitle>
           <hr></hr>
           <p>Languages: HTML, CSS/SCSS, Javascript/Typescript</p>
@@ -106,7 +114,7 @@ export default function Technologies() {
           <hr></hr>
           <p>Bootstrap</p>
         </CustomCard>
-        <CustomCard variants={skillVariant}>
+        <CustomCard variants={skillVariant} initial={initial}>
           <CardTitle>Back End</CardTitle>
 
           <hr></hr>
@@ -116,7 +124,7 @@ export default function Technologies() {
           <hr></hr>
           <p>Axios</p>
         </CustomCard>
-        <CustomCard variants={skillVariant}>
+        <CustomCard variants={skillVariant} initial={initial}>
           <CardTitle>Database</CardTitle>
 
           <hr></hr>
@@ -124,7 +132,7 @@ export default function Technologies() {
           <hr></hr>
           <p>Mongoose</p>
         </CustomCard>
-        <CustomCard variants={skillVariant}>
+        <CustomCard variants={skillVariant} initial={initial}>
           <CardTitle>Tools & Deployment</CardTitle>
 
           <hr></hr>
@@ -137,6 +145,7 @@ export default function Technologies() {
           <p>Github Pages & Netlify</p>
         </CustomCard>
       </SkillsWrapper>
+      <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
     </MainContainer>
   );
 }

@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import { breakpoints } from './localvars';
 
 const CustomCard = styled(motion.div)`
-  opacity: 0;
   background-color: ${theme.dark};
   padding: 2rem 1rem 1rem 1rem;
   width: 20rem;
@@ -32,7 +31,12 @@ const Divider = styled.hr`
   padding: 0;
 `;
 
-const variants = { open: { opacity: 1 }, closed: { opacity: 0 } };
+const variants = {
+  open: { opacity: 1 },
+  closed: { opacity: 0 }
+};
+const initial = { opacity: 0 };
+
 export default function Project({
   title = '',
   tech = [],
@@ -54,8 +58,9 @@ export default function Project({
       <CustomCard
         onClick={handleOpen}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ scale: 1 }}
         variants={variants}
+        initial={initial}
       >
         <Title>{title}</Title>
         {tech.map(text => (
