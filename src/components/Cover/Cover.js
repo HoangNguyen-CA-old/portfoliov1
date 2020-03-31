@@ -34,11 +34,10 @@ const Name = styled(motion.h1)`
   margin-top: 12rem;
 
   @media ${breakpoints[2]} {
-    margin-top: 5rem;
+    margin-top: 3rem;
     position: absolute;
   }
   @media ${breakpoints[3]} {
-    margin-top: 10rem;
   }
 `;
 
@@ -59,7 +58,7 @@ const LeftDiv = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 3rem;
+  padding: 4rem;
 
   overflow: visible;
   z-index: 5;
@@ -82,6 +81,7 @@ const BottomDiv = styled.div`
     padding: 3rem 20%;
   }
   @media ${breakpoints[2]} {
+    display: block;
     padding: 3rem 10rem 3rem 4rem;
   }
 `;

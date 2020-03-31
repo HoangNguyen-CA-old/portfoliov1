@@ -1,13 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../../variables';
+import { breakpoints } from './localvars';
 
 const SVG = styled.svg`
-  position: absolute;
-  width: 35rem;
-  top: 0rem;
-  left: -10rem;
-  z-index: 1;
+  display: none;
+
+  @media ${breakpoints[2]} {
+    display: block;
+    position: absolute;
+    width: 35rem;
+    top: -2rem;
+    left: -10rem;
+    z-index: 1;
+  }
+  @media ${breakpoints[3]} {
+    width: 40rem;
+    top: -2rem;
+    left: -10rem;
+    z-index: 1;
+  }
 `;
 
 export default function web_developer() {

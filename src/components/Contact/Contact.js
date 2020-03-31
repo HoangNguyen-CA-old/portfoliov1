@@ -10,7 +10,7 @@ const FormWrapper = styled(motion.div)``;
 
 const Header = styled(motion.h1)`
   font-size: 2.5rem;
-  color: ${theme.dark};
+  color: ${theme.darkerPrimary};
   text-align: center;
   margin-bottom: 1.5rem;
 `;
