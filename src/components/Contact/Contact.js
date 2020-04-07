@@ -27,16 +27,16 @@ const MainContainer = styled(motion.div)`
 
 const variant = {
   open: {
-    transition: { delayChildren: 0.2, staggerChildren: 0.1 }
+    transition: { delayChildren: 0.2, staggerChildren: 0.1 },
   },
   closed: {
-    transition: { staggerChildren: 0.04, staggerDirection: -1 }
-  }
+    transition: { staggerChildren: 0.04, staggerDirection: -1 },
+  },
 };
 
 const headerVariant = {
   open: { opacity: 1 },
-  closed: { opacity: 0 }
+  closed: { opacity: 0 },
 };
 
 const initial = { opacity: 0 };
@@ -50,13 +50,7 @@ export default function Contact() {
   return (
     <MainContainer animate={isOpen ? 'open' : 'closed'} id='contact_link'>
       <FormWrapper variants={variant}>
-        <Header
-          onClick={() => {
-            setOpen(!isOpen);
-          }}
-          variants={headerVariant}
-          initial={initial}
-        >
+        <Header variants={headerVariant} initial={initial}>
           Contact
         </Header>
         <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
