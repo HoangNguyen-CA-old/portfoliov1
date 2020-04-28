@@ -40,20 +40,20 @@ const ProjectsWrapper = styled(motion.div)`
 
 const headerVariant = {
   open: {
-    opacity: 1
+    opacity: 1,
   },
   closed: {
-    opacity: 0
-  }
+    opacity: 0,
+  },
 };
 
 const projectsVariant = {
   open: {
-    transition: { delayChildren: 0.2, staggerChildren: 0.1 }
+    transition: { delayChildren: 0.2, staggerChildren: 0.1 },
   },
   closed: {
-    transition: { staggerChildren: 0.04, staggerDirection: -1 }
-  }
+    transition: { staggerChildren: 0.04, staggerDirection: -1 },
+  },
 };
 
 const initial = { opacity: 0 };
@@ -61,7 +61,7 @@ const initial = { opacity: 0 };
 const headerTransition = { delay: 0.2 };
 
 export default function ProjectSection() {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
 
   const handleAnimate = () => {
     setOpen(true);
@@ -79,7 +79,6 @@ export default function ProjectSection() {
       >
         Projects
       </Header>
-      <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
 
       <ProjectsWrapper variants={projectsVariant}>
         <Project
@@ -105,7 +104,6 @@ export default function ProjectSection() {
           demoLink='https://hoangnguyen-ca.github.io/name-analyzer/'
         ></Project>
       </ProjectsWrapper>
-      <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
     </MainContainer>
   );
 }

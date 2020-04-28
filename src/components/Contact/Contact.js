@@ -42,7 +42,7 @@ const headerVariant = {
 const initial = { opacity: 0 };
 
 export default function Contact() {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
   const handleAnimate = () => {
     setOpen(true);
   };
@@ -53,7 +53,6 @@ export default function Contact() {
         <Header variants={headerVariant} initial={initial}>
           Contact
         </Header>
-        <ScrollTrigger onEnter={handleAnimate}></ScrollTrigger>
 
         <ContactForm></ContactForm>
       </FormWrapper>
